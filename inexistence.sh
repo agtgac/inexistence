@@ -1,12 +1,12 @@
 #!/bin/bash
 #
-# https://github.com/Aniverse/inexistence
+# https://github.com/cnpilot/inexistence
 # Author: Aniverse
 #
 # --------------------------------------------------------------------------------
 usage() {
 bash <(wget -qO- https://git.io/abcde)
-bash <(curl -s https://raw.githubusercontent.com/Aniverse/inexistence/master/inexistence.sh)
+bash <(curl -s https://raw.githubusercontent.com/cnpilot/inexistence/master/inexistence.sh)
 }
 
 # --------------------------------------------------------------------------------
@@ -426,7 +426,7 @@ TR_latest_ver=$(wget -qO- https://github.com/transmission/transmission/releases 
 
 clear
 
-wget --no-check-certificate -t1 -T5 -qO- https://raw.githubusercontent.com/Aniverse/inexistence/files/logo/inexistence.logo.1
+wget --no-check-certificate -t1 -T5 -qO- https://raw.githubusercontent.com/cnpilot/inexistence/files/logo/inexistence.logo.1
 
 echo "${bold}---------- [System Information] ----------${normal}"
 echo
@@ -1619,7 +1619,7 @@ echo $iUser >> $LogBase/iUser.txt
 
 if [[ $aptsources == Yes ]] && [[ $CODENAME != jessie ]]; then
     cp /etc/apt/sources.list /etc/apt/sources.list."$(date "+%Y%m%d.%H%M")".bak
-    wget --no-check-certificate -O /etc/apt/sources.list https://github.com/Aniverse/inexistence/raw/$default_branch/00.Installation/template/$DISTROL.apt.sources
+    wget --no-check-certificate -O /etc/apt/sources.list https://github.com/cnpilot/inexistence/raw/$default_branch/00.Installation/template/$DISTROL.apt.sources
     sed -i "s/RELEASE/$CODENAME/g" /etc/apt/sources.list
     [[ $DISTROL == debian ]] && apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 5C808C2B65558117
 elif [[ $aptsources == Yes ]] && [[ $CODENAME == jessie ]]; then
@@ -1705,7 +1705,7 @@ sed -i "s/TRANSLATE=1/TRANSLATE=0/" /etc/checkinstallrc
 
 # Get repository
 [[ -d /etc/inexistence ]] && mv /etc/inexistence /etc/inexistence_old_$(date "+%Y%m%d_%H%M")
-git clone --depth=1 -b $iBranch https://github.com/Aniverse/inexistence /etc/inexistence
+git clone --depth=1 -b $iBranch https://github.com/cnpilot/inexistence /etc/inexistence
 chmod -R 755 /etc/inexistence
 chmod -R 644 /etc/inexistence/00.Installation/template/systemd/*
 
@@ -1864,7 +1864,7 @@ apt-get --force-yes clean
 
 echo -e "${baihongse}executing update${normal}\n"
 cp /etc/apt/sources.list /etc/apt/sources.list."$(date "+%Y.%m.%d.%H.%M.%S")".bak
-wget --no-check-certificate -O /etc/apt/sources.list https://github.com/Aniverse/inexistence/raw/$default_branch/00.Installation/template/$DISTROL.apt.sources
+wget --no-check-certificate -O /etc/apt/sources.list https://github.com/cnpilot/inexistence/raw/$default_branch/00.Installation/template/$DISTROL.apt.sources
 [[ $DISTROL == debian ]] && apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 5C808C2B65558117
 
 if [[ $UPGRDAE3 == Yes ]]; then
@@ -2113,7 +2113,7 @@ else
     python setup.py install_data # For Desktop users
 
     if [[ $Deluge_1_3_15_skip_hash_check_patch == Yes ]]; then
-        wget https://raw.githubusercontent.com/Aniverse/inexistence/files/miscellaneous/deluge.1.3.15.skip.no.full.allocate.patch \
+        wget https://raw.githubusercontent.com/cnpilot/inexistence/files/miscellaneous/deluge.1.3.15.skip.no.full.allocate.patch \
         -O /tmp/deluge.1.3.15.skip.no.full.allocate.patch
         cd /usr/lib/python2.7/dist-packages/deluge-1.3.15-py2.7.egg/deluge
         patch -p1 < /tmp/deluge.1.3.15.skip.no.full.allocate.patch
