@@ -23,7 +23,8 @@ bash <(wget -qO- https://git.io/abcde)
 ```
 bash <(wget --no-check-certificate -qO- https://github.com/cnpilot/inexistence/raw/master/inexistence.sh)
 ```
-
+安装lt13
+bash <(wget -qO- https://github.com/cnpilot/inexistence/raw/master/00.Installation/package/libtorrent-rasterbar/install) -m deb2
 ## Installation Guide
 
 ![脚本参数](https://github.com/cnpilot/pics/raw/master/inexistence/inexistence.09.png)
