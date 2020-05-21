@@ -21,14 +21,14 @@ bash <(wget -qO- https://git.io/abcde)
 ```
 
 ```
-bash <(wget --no-check-certificate -qO- https://github.com/cnpilot/inexistence/raw/master/inexistence.sh)
+bash <(wget --no-check-certificate -qO- https://github.com/agtgac/inexistence/raw/master/inexistence.sh)
 ```
 安装lt13
 ```
-bash <(wget -qO- https://github.com/cnpilot/inexistence/raw/master/00.Installation/package/libtorrent-rasterbar/install) -m deb2
+bash <(wget -qO- https://github.com/agtgac/inexistence/raw/master/00.Installation/package/libtorrent-rasterbar/install) -m deb2
 ## Installation Guide
 
-![脚本参数](https://github.com/cnpilot/pics/raw/master/inexistence/inexistence.09.png)
+![脚本参数](https://github.com/agtgac/pics/raw/master/inexistence/inexistence.09.png)
 
 脚本支持自定义参数运行，比如我个人常用的参数是：
 ```
@@ -38,7 +38,7 @@ bash <(wget -qO- https://git.io/abcde) --apt-no --tweaks-yes --bbr-no --tools-no
 ```
 具体参数的解释在下文中有说明  
 
-![引导界面](https://github.com/cnpilot/pics/raw/master/inexistence/inexistence.01.png)
+![引导界面](https://github.com/agtgac/pics/raw/master/inexistence/inexistence.01.png)
 
 检查是否以 root 权限来运行脚本，检查公网 IP 地址与系统参数  
 
